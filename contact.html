@@ -47,8 +47,10 @@
         <div class="contact-form">
           <form action="#" method="POST">
             <input /><br />
-            <input type="text" /><br />
+            <label>First name</label>
+            <input type="text" name="firstname" placeholder="John" /><br />
             <input type="number" /><br />
+            <input type="date" /><br />
             <input id="password" type="password" /><br />
             <input type="file" />
 
@@ -74,6 +76,33 @@
               value="other"
             />Swimming<br />
             <button id="show">show password</button>
+
+            <select>
+              <option>Select Gender</option>
+              <option>Man</option>
+              <option>Woman</option>
+              <option>none binary</option>
+            </select>
+
+            <select multiple>
+              <option value="">Select Gender</option>
+              <option value="man">Man</option>
+              <option value="woman">Woman</option>
+              <option value="none binary">none binary</option></select
+            ><br />
+            <div>
+              <input list="genders" />
+              <datalist id="genders">
+                <option value="man">Man</option>
+                <option value="woman">Woman</option>
+                <option value="none binary">none binary</option>
+              </datalist>
+            </div>
+            <br />
+            <textarea rows="20" cols="50"></textarea>
+
+            <input type="reset" />
+            <input type="submit" value="ok send" />
           </form>
         </div>
       </div>
