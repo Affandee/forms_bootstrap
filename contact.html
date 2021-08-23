@@ -44,8 +44,45 @@
             <a href="mailto:hello@example.com">hello@example.com</a>
           </div>
         </div>
-        <div class="contact-form"></div>
+        <div class="contact-form">
+          <form action="#" method="POST">
+            <input /><br />
+            <input type="text" /><br />
+            <input type="number" /><br />
+            <input id="password" type="password" /><br />
+            <input type="file" />
+
+            <h4>Gender</h4>
+            <input type="radio" name="gender" value="male" />Male<br />
+            <input type="radio" name="gender" value="female" />Female<br />
+            <input type="radio" name="gender" value="other" />Other<br />
+
+            <h4>Favourites</h4>
+            <input
+              type="checkbox"
+              name="favourites"
+              value="male"
+            />Running<br />
+            <input
+              type="checkbox"
+              name="favourites"
+              value="female"
+            />Climbing<br />
+            <input
+              type="checkbox"
+              name="favourites"
+              value="other"
+            />Swimming<br />
+            <button id="show">show password</button>
+          </form>
+        </div>
       </div>
     </main>
+    <script>
+      document.querySelector("#show").addEventListener("click", function (e) {
+        e.preventDefault(); //will not do its default behaviour
+        document.querySelector("#password").setAttribute("type", "text");
+      });
+    </script>
   </body>
 </html>
